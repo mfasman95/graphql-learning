@@ -1,0 +1,43 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "graphql learning server",
+  "main": "./src/server.js",
+  "author": "Matthew Fasman",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ./src/server.js",
+    "nodemon": "nodemon ./src/server.js",
+    "babel:watch": "babel --watch ./client/scripts --out-file ./client/bundle.js",
+    "pretest": "eslint ./src --fix",
+    "test": "echo \"Tests complete\""
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.0",
+    "graphql": "^0.11.4",
+    "graphql-server-express": "^1.1.2",
+    "graphql-tools": "^1.2.3"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "nodemon": "^1.12.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb/base",
+    "rules": {
+      "no-underscore-dangle": "off",
+      "no-plusplus": "off"
+    }
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
